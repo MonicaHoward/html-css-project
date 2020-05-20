@@ -266,12 +266,6 @@ h1::after {
     }
 }
 
-/* h1:hover::before{
-    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) both infinite;
-}
-h1:hover::after{
-    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
-} */
 h1::before{
     animation: glitch 10s cubic-bezier(.25, .46, .45, .94) both infinite;
 }
@@ -303,32 +297,10 @@ footer {
     margin: 0;
 }
 
-/*
-
-All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
-        
-The 'supports' rule will only run if your browser supports CSS grid.
-
-Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
-
-*/
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
-
-:root {
-	/* Base font size */
-	font-size: 10px;
-}
-
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
-}
-
-body {
-	min-height: 100vh;
-	background-color: #fafafa;
 }
 
 .container {
@@ -342,14 +314,11 @@ body {
 .gallery {
 	display: flex;
 	flex-wrap: wrap;
-	/* Compensate for excess margin on outer gallery flex items */
 	margin: -1rem -1rem;
 }
 
 .gallery-item {
-	/* Minimum width of 24rem and grow to fit available space */
 	flex: 1 0 24rem;
-	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
 	margin: 1rem;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 	overflow: hidden;
@@ -367,13 +336,7 @@ body {
 	transform: scale(1.15);
 }
 
-/*
 
-The following rule will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
-
-*/
 
 @supports (display: grid) {
 	.gallery {
@@ -389,7 +352,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 	}
 }
 
-/* contact styling */
+/* Contact styling */
 
 .holder {
     background: #fff;
@@ -440,8 +403,7 @@ fieldset {
 }
 
 #contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
-	-webkit-transition:border-color 0.3s ease-in-out;
-	-moz-transition:border-color 0.3s ease-in-out;
+
 	transition:border-color 0.3s ease-in-out;
 	border:1px solid #f0f;
 }
@@ -465,8 +427,7 @@ fieldset {
 
 #contact button[type="submit"]:hover {
 	background:#f0f;
-	-webkit-transition:background 0.3s ease-in-out;
-	-moz-transition:background 0.3s ease-in-out;
+
 	transition:background-color 0.3s ease-in-out;
 }
 
