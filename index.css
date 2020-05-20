@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:wght@100&display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+#vid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.main {
+    /* background: #aaa; */
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.warning {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #f0f;
+    margin-left: 5%;
+}
+nav {
+    padding: 3%;
+}
+.warning-text {
+    font-size: 1.2em;
+    margin-top: 30px;
+}
+.menu-item {
+    /* font-size : 2em;
+    color: #f0f */
+    text-decoration: none;
+
+    font-family: 'Raleway', sans-serif;    font-size: 5em;
+    letter-spacing: 3px;
+    color: #f0f;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.menu-item::before, .menu-item::after {
+    content: "gallery";
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0 ;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+
+}
+
+.menu-item::before {
+    color: #0FF;
+    z-index: -1;
+}
+
+.menu-item::after {
+    color:#000;
+    z-index: -2;
+}
+
+.menu-item2 {
+    /* font-size : 2em;
+    color: #f0f */
+    text-decoration: none;
+
+    font-family: 'Raleway', sans-serif;    font-size: 5em;
+    letter-spacing: 3px;
+    color: #f0f;
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.menu-item2::before, .menu-item2::after {
+    content: "contact";
+    display: block;
+    position: absolute;
+    top: 0%;
+    left:0 ;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+
+}
+
+.menu-item2::before {
+    color: #0FF;
+    z-index: -1;
+}
+
+.menu-item2::after {
+    color:#000;
+    z-index: -2;
+}
+
+
+@keyframes glitchy {
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translate(-5px, -5px);
+    }
+    40%{
+        transform: translate(5px, -5px);
+    }
+    60%{
+        transform: translate(5px, 5px);
+    }
+    80%{
+        transform: translate(5px, -5px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+.menu-item:hover::before{
+    animation: glitchy .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+.menu-item:hover::after{
+    animation: glitchy .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+.menu-item2:hover::before{
+    animation: glitchy .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+.menu-item2:hover::after{
+    animation: glitchy .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+/* #parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: red;
+  }
+     */
+.about-text {
+    /* font-size: 2em; */
+    margin: 5%;
+    line-height: 2;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;    font-size: 5em;
+    letter-spacing: 3px;
+    color: #fff;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+}
+
+h1::before, h1::after {
+    content: "MONICA HOWARD";
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0 ;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+
+}
+
+h1::before {
+    color: #0FF;
+    z-index: -1;
+}
+
+h1::after {
+    color:#f0f;
+    z-index: -2;
+}
+
+@keyframes glitch {
+    0%{
+        transform: translate(0);
+    }
+    20%{
+        transform: translate(-5px, -5px);
+    }
+    40%{
+        transform: translate(5px, -5px);
+    }
+    60%{
+        transform: translate(5px, 5px);
+    }
+    80%{
+        transform: translate(5px, -5px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+/* h1:hover::before{
+    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+h1:hover::after{
+    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+} */
+h1::before{
+    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) both infinite;
+}
+h1::after{
+    animation: glitch 10s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    /* height: 50vh; */
+    /* width: 100vw; */
+    text-align: center;
+
+}
+
+/* Gallery Styling */
+
+.home{
+    text-decoration: none;
+
+    font-family: 'Raleway', sans-serif;    font-size: 5em;
+    letter-spacing: 3px;
+    color: #f0f;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+/*
+
+All grid code is placed in a 'supports' rule (feature query) at the bottom of the CSS (Line 77). 
+        
+The 'supports' rule will only run if your browser supports CSS grid.
+
+Flexbox is used as a fallback so that browsers which don't support grid will still recieve an identical layout.
+
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+:root {
+	/* Base font size */
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	max-width: 100rem;
+	margin: 2% auto;
+	padding: 0 2rem 2rem;
+}
+
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+        margin: 0;
+        opacity: 0.8;
+	}
+}
+
+/* contact styling */
+
+.holder {
+    background: #fff;
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+    position:relative;
+    opacity: 0.8;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#fff;
+	padding:25px;
+    margin:50px 0;
+    opacity: 0.8;
+
+}
+
+#contact h3 {
+	color: #0CF;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #0CF;
+	background:#FFF;
+	margin:0 0 5px;
+    padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #f0f;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#f0f;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { 
+    box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+}
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #f0f;
+}
+
+
+
