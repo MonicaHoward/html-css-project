@@ -338,7 +338,7 @@ footer {
 
 
 
-@supports (display: grid) {
+/* @supports (display: grid) {
 	.gallery {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
@@ -350,11 +350,13 @@ footer {
         margin: 0;
         opacity: 0.8;
 	}
-}
+} */
 
 /* Contact styling */
 
 .holder {
+    font-family: 'Raleway', sans-serif;    font-size: 5em;
+
     background: #fff;
 	max-width:400px;
 	width:100%;
@@ -363,7 +365,9 @@ footer {
     opacity: 0.8;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+#contact input[type="text"], #contact textarea, #contact button[type="submit"] { 
+    font-family: 'Raleway', sans-serif;  
+ }
 
 #contact {
 	background:#fff;
@@ -394,7 +398,7 @@ fieldset {
 	width: 100%;
 }
 
-#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+#contact input[type="text"], #contact textarea {
 	width:100%;
 	border:1px solid #0CF;
 	background:#FFF;
@@ -402,7 +406,7 @@ fieldset {
     padding:10px;
 }
 
-#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+#contact input[type="text"]:hover, #contact textarea:hover {
 
 	transition:border-color 0.3s ease-in-out;
 	border:1px solid #f0f;
